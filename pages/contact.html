@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV de Marwen Zarrouk</title>
+    <link rel="stylesheet" type="text/css" href="../style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    <section class="hero2">
+        <div class="main-width">
+            <header>
+                <a href="index.html">
+                    <div class="logo">
+                        <a href="../index.html"><i class="fa-sharp fa-light fa-m fa-spin fa-spin-reverse"></i></a>
+                        <a href="../index.html"><i class="fa-sharp fa-light fa-z fa-spin fa-spin-reverse"></i></a>
+                    </div>
+                </a>
+                <nav>
+                    <ul class="nav-list">
+                        <li><a href="Apropos.html">A propos de moi</a></li>
+                        <li><a href="parcoursacademique.html">Formations</a></li>
+                        <li><a href="Experience.html">Expériences</a></li>
+                        <li><a href="competences.html">Compétences</a></li>
+                        <li><a href="quiz.html">Quiz</a></li>
+                        <li class="btn"><a href="contact.html">Messagerie</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="containercontact">
+                <form id="contactForm">
+                    <div class="contactForm">
+                        <h2 class="h2">Envoyer un email</h2>
+                        <div class="formBox">
+                            <div class="inputBox w50">
+                                <input type="text" name="firstName" required="required">
+                                <span>Prénom :</span>
+                            </div>
+                            <div class="inputBox w50">
+                                <input type="text" name="lastName" required="required">
+                                <span>Nom :</span>
+                            </div>
+                            <div class="inputBox w50">
+                                <input type="email" name="email" required="required">
+                                <span>Adresse email :</span>
+                            </div>
+                            <div class="inputBox w50">
+                                <input type="text" name="mobileNumber" required="required">
+                                <span>Numéro de téléphone :</span>
+                            </div>
+                            <div class="inputBox w100">
+                                <textarea name="message" required="required"></textarea>
+                                <span>Écrire votre email :</span>
+                            </div>
+                            <div class="inputBox w100">
+                                <input type="submit" value="Envoyer">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <p>Email envoyé avec succès !</p>
+        </div>
+    </div>
+
+   
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Empêche la soumission par défaut
+
+            // Affiche la popup
+            const popup = document.getElementById('popup');
+            popup.classList.add('show');
+
+            // Réinitialise le formulaire
+            this.reset();
+
+            // Masque la popup après 3 secondes
+            setTimeout(() => {
+                popup.classList.remove('show');
+            }, 3000); // Durée de 3 secondes
+        });
+    </script>
+</body>
+</html>
